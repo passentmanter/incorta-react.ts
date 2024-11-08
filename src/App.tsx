@@ -15,8 +15,8 @@ const App: React.FC = () => {
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/season/:season" element={<RaceList />} />
+            <Route path="incorta-react.ts/" element={<Home />} />
+            <Route path="incorta-react.ts/season/:season" element={<RaceList />} />
           </Routes>
         </Router>
       </div>

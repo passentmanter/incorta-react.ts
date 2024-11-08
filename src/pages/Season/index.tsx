@@ -116,7 +116,7 @@ const SeasonList: React.FC = () => {
 
             <Link
               className={`text-[#0284c7] ${view === "card" && "ml-auto"}`}
-              to={`/season/${season.season}`}
+              to={`/incorta-react.ts/season/${season.season}`}
             >
               Show races
             </Link>
