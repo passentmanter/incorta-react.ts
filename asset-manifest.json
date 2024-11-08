@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.a171d40a.css",
-    "main.js": "/home/static/js/main.dc50e350.js",
-    "static/js/453.a4bb1f77.chunk.js": "/home/static/js/453.a4bb1f77.chunk.js",
-    "static/media/primeicons.svg": "/home/static/media/primeicons.6ed59f962963a4a73af2.svg",
-    "static/media/gif": "/home/static/media/da832510129901b5af57fce40d583724.2699c49f87de572b8f34.gif",
-    "static/media/primeicons.eot": "/home/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
-    "static/media/primeicons.woff": "/home/static/media/primeicons.8931fda1930c3bd21e96.woff",
-    "static/media/primeicons.ttf": "/home/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
-    "static/media/landImg.jpeg": "/home/static/media/landImg.221e1cc6c61aa9e38a67.jpeg",
-    "static/media/primeicons.woff2": "/home/static/media/primeicons.024b32cc7bf399b1a847.woff2",
-    "static/media/pngegg.png": "/home/static/media/pngegg.254eaffa3f4703fbf29a.png",
-    "static/media/seasons.png": "/home/static/media/seasons.f08e96d2487acb82aa15.png",
-    "index.html": "/home/index.html",
-    "main.a171d40a.css.map": "/home/static/css/main.a171d40a.css.map",
-    "main.dc50e350.js.map": "/home/static/js/main.dc50e350.js.map",
-    "453.a4bb1f77.chunk.js.map": "/home/static/js/453.a4bb1f77.chunk.js.map"
+    "main.css": "/incorta-react.ts/static/css/main.43939576.css",
+    "main.js": "/incorta-react.ts/static/js/main.3a36603f.js",
+    "static/js/453.a4bb1f77.chunk.js": "/incorta-react.ts/static/js/453.a4bb1f77.chunk.js",
+    "static/media/primeicons.svg": "/incorta-react.ts/static/media/primeicons.6ed59f962963a4a73af2.svg",
+    "static/media/gif": "/incorta-react.ts/static/media/da832510129901b5af57fce40d583724.2699c49f87de572b8f34.gif",
+    "static/media/primeicons.eot": "/incorta-react.ts/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
+    "static/media/primeicons.woff": "/incorta-react.ts/static/media/primeicons.8931fda1930c3bd21e96.woff",
+    "static/media/primeicons.ttf": "/incorta-react.ts/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
+    "static/media/landImg.jpeg": "/incorta-react.ts/static/media/landImg.221e1cc6c61aa9e38a67.jpeg",
+    "static/media/primeicons.woff2": "/incorta-react.ts/static/media/primeicons.024b32cc7bf399b1a847.woff2",
+    "static/media/pngegg.png": "/incorta-react.ts/static/media/pngegg.254eaffa3f4703fbf29a.png",
+    "static/media/seasons.png": "/incorta-react.ts/static/media/seasons.f08e96d2487acb82aa15.png",
+    "index.html": "/incorta-react.ts/index.html",
+    "main.43939576.css.map": "/incorta-react.ts/static/css/main.43939576.css.map",
+    "main.3a36603f.js.map": "/incorta-react.ts/static/js/main.3a36603f.js.map",
+    "453.a4bb1f77.chunk.js.map": "/incorta-react.ts/static/js/453.a4bb1f77.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a171d40a.css",
-    "static/js/main.dc50e350.js"
+    "static/css/main.43939576.css",
+    "static/js/main.3a36603f.js"
   ]
 }
