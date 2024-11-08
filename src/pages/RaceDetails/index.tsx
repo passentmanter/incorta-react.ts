@@ -53,8 +53,6 @@ const RaceDetails: React.FC = () => {
 
       try {
         const data: any = await apiService.getRaceDetails(season, round);
-        console.log("data", data);
-
         setRaceDetails(data);
 
         const finishedDriverList = data.filter(
