@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.518eb910.css",
+    "main.js": "/static/js/main.29b56d7f.js",
+    "static/js/453.a4bb1f77.chunk.js": "/static/js/453.a4bb1f77.chunk.js",
+    "static/media/primeicons.svg": "/static/media/primeicons.6ed59f962963a4a73af2.svg",
+    "static/media/gif": "/static/media/da832510129901b5af57fce40d583724.2699c49f87de572b8f34.gif",
+    "static/media/primeicons.eot": "/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
+    "static/media/primeicons.woff": "/static/media/primeicons.8931fda1930c3bd21e96.woff",
+    "static/media/primeicons.ttf": "/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
+    "static/media/landImg.jpeg": "/static/media/landImg.221e1cc6c61aa9e38a67.jpeg",
+    "static/media/primeicons.woff2": "/static/media/primeicons.024b32cc7bf399b1a847.woff2",
+    "static/media/pngegg.png": "/static/media/pngegg.254eaffa3f4703fbf29a.png",
+    "static/media/seasons.png": "/static/media/seasons.f08e96d2487acb82aa15.png",
+    "index.html": "/index.html",
+    "main.518eb910.css.map": "/static/css/main.518eb910.css.map",
+    "main.29b56d7f.js.map": "/static/js/main.29b56d7f.js.map",
+    "453.a4bb1f77.chunk.js.map": "/static/js/453.a4bb1f77.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.518eb910.css",
+    "static/js/main.29b56d7f.js"
+  ]
+}
