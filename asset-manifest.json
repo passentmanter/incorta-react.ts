@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/incorta-react.ts/static/css/main.5da4dcc5.css",
-    "main.js": "/incorta-react.ts/static/js/main.0f9e6047.js",
+    "main.js": "/incorta-react.ts/static/js/main.c54a9d88.js",
     "static/js/453.a4bb1f77.chunk.js": "/incorta-react.ts/static/js/453.a4bb1f77.chunk.js",
     "static/media/Sc2024-11-07 134619.png": "/incorta-react.ts/static/media/Sc2024-11-07 134619.c06195424bb4d5334c1d.png",
     "static/media/InterVariable-Italic.woff2": "/incorta-react.ts/static/media/InterVariable-Italic.e295f70fe3e2df296c7b.woff2",
@@ -17,11 +17,11 @@
     "static/media/seasons.png": "/incorta-react.ts/static/media/seasons.f08e96d2487acb82aa15.png",
     "index.html": "/incorta-react.ts/index.html",
     "main.5da4dcc5.css.map": "/incorta-react.ts/static/css/main.5da4dcc5.css.map",
-    "main.0f9e6047.js.map": "/incorta-react.ts/static/js/main.0f9e6047.js.map",
+    "main.c54a9d88.js.map": "/incorta-react.ts/static/js/main.c54a9d88.js.map",
     "453.a4bb1f77.chunk.js.map": "/incorta-react.ts/static/js/453.a4bb1f77.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5da4dcc5.css",
-    "static/js/main.0f9e6047.js"
+    "static/js/main.c54a9d88.js"
   ]
 }
