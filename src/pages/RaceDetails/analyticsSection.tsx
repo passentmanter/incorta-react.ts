@@ -26,6 +26,7 @@ interface RaceDetail {
   Time?: { millis: string };
   points: number;
   laps: number;
+  status: string;
 }
 
 interface ComparisonDriver {

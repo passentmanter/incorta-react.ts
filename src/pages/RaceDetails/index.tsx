@@ -7,7 +7,7 @@ import vrsImg from "../../assets/Sc2024-11-07 134619.png";
 import loadingGif from "../../assets/da832510129901b5af57fce40d583724.gif";
 
 const titles = {
-  default: "How Quickly Formula 1’s Top Three Drivers Reached Their Milestones",
+  default: "An Analysis of Formula 1’s Quickest Race Finishers",
 };
 
 interface Driver {
@@ -28,6 +28,7 @@ interface RaceDetail {
   Time?: { millis: string };
   points: number;
   laps: number;
+  status: string;
 }
 
 interface ComparisonData {
@@ -52,12 +53,17 @@ const RaceDetails: React.FC = () => {
 
       try {
         const data: any = await apiService.getRaceDetails(season, round);
+        console.log("data", data);
 
         setRaceDetails(data);
 
+        const finishedDriverList = data.filter(
+          (d: RaceDetail) => d.status === "Finished"
+        );
+
         const xAxis: string[] = [];
         const yAxis: number[] = [];
-        for (let index = 0; index < Math.min(data.length, 3); index++) {
+        for (let index = 0; index < finishedDriverList.length; index++) {
           const element = data[index];
           xAxis.push(element.Driver.givenName);
           yAxis.push(Number(element.Time.millis));
