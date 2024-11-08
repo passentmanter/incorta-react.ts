@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/incorta-react.ts/static/css/main.43939576.css",
-    "main.js": "/incorta-react.ts/static/js/main.ec1b109e.js",
+    "main.js": "/incorta-react.ts/static/js/main.8901d3c1.js",
     "static/js/453.a4bb1f77.chunk.js": "/incorta-react.ts/static/js/453.a4bb1f77.chunk.js",
     "static/media/primeicons.svg": "/incorta-react.ts/static/media/primeicons.6ed59f962963a4a73af2.svg",
     "static/media/gif": "/incorta-react.ts/static/media/da832510129901b5af57fce40d583724.2699c49f87de572b8f34.gif",
@@ -14,11 +14,11 @@
     "static/media/seasons.png": "/incorta-react.ts/static/media/seasons.f08e96d2487acb82aa15.png",
     "index.html": "/incorta-react.ts/index.html",
     "main.43939576.css.map": "/incorta-react.ts/static/css/main.43939576.css.map",
-    "main.ec1b109e.js.map": "/incorta-react.ts/static/js/main.ec1b109e.js.map",
+    "main.8901d3c1.js.map": "/incorta-react.ts/static/js/main.8901d3c1.js.map",
     "453.a4bb1f77.chunk.js.map": "/incorta-react.ts/static/js/453.a4bb1f77.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.43939576.css",
-    "static/js/main.ec1b109e.js"
+    "static/js/main.8901d3c1.js"
   ]
 }
