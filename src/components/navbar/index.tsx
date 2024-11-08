@@ -6,11 +6,12 @@ import logo from "../../assets/pngegg.png";
 const Navbar: React.FC = () => {
   const location = useLocation();
   const locationArray = location.pathname.split("/");
+  const filteredArray = locationArray.filter((el) => el != "");
 
   return (
     <div
       className={`px-16 py-8 ${
-        locationArray.length <= 2 ? "absolute" : "bg-[#2B2B2B]"
+        filteredArray.length <= 1 ? "absolute" : "bg-[#2B2B2B]"
       } top-0 z-10 w-full flex items-center justify-between`}
     >
       <Link to="incorta-react.ts">
