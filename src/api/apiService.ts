@@ -6,30 +6,33 @@ interface Season {
 }
 
 interface Race {
-    round: string;
-    raceName: string;
-    circuit: string;
-    date: string;
-    season: string;
+  round: string;
+  raceName: string;
+  circuit: string;
+  date: string;
+  season: string;
+  url: string;
+  Circuit: {
+    Location: { country: string; lat: string; locality: string; long: string };
+    circuitId: string;
+    circuitName: string;
     url: string;
-    Circuit: {
-      Location: { country: string; lat: string; locality: string; long: string };
-      circuitId: string;
-      circuitName: string;
-      url: string;
-    };
+  };
+}
+
+interface Driver {
+  givenName: string;
+  familyName: string;
+  nationality: string;
+  driverId: string;
 }
 
 interface DriverResult {
-  Driver: {
-    givenName: string;
-    familyName: string;
-    nationality: string;
-  };
-  Constructor: {
-    name: string;
-  };
-  position: string;
+  Driver: Driver;
+  Time?: { millis: string; time: string };
+  laps: string;
+  number: string;
+  points: string;
 }
 
 const apiService = {
@@ -58,13 +61,21 @@ const apiService = {
   },
 
   // Fetch race details including drivers for a specific season and race round
-  getRaceDetails: async (season: string, round: string): Promise<DriverResult[]> => {
+  getRaceDetails: async (
+    season: string,
+    round: string | undefined
+  ): Promise<DriverResult[]> => {
     try {
-      const response = await fetch(`${BASE_URL}/${season}/${round}/results.json`);
+      const response = await fetch(
+        `${BASE_URL}/${season}/${round}/results.json`
+      );
       const data = await response.json();
       return data.MRData.RaceTable.Races[0].Results as DriverResult[]; // Cast to DriverResult[]
     } catch (error) {
-      console.error(`Error fetching race details for season ${season}, round ${round}:`, error);
+      console.error(
+        `Error fetching race details for season ${season}, round ${round}:`,
+        error
+      );
       throw error;
     }
   },

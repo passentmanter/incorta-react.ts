@@ -5,15 +5,14 @@ import logo from "../../assets/pngegg.png";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
-console.log('location',location);
 
   return (
     <div
       className={`px-16 py-8 ${
-        location.pathname === "/incorta-react.ts/" ? "absolute" : "bg-[#2B2B2B]"
+        location.pathname === "/incorta-react.ts" ? "absolute" : "bg-[#2B2B2B]"
       } top-0 z-10 w-full flex items-center justify-between`}
     >
-      <Link to="incorta-react.ts/">
+      <Link to="incorta-react.ts">
         <img className="w-[10em]" src={logo} alt="logo" />
       </Link>
     </div>

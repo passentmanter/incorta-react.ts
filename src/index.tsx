@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 import 'primeicons/primeicons.css';
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
