@@ -42,7 +42,9 @@ const ListView: React.FC<ListViewProps> = ({ race, season }) => {
 
   return (
     <Link to={`/season/${season}/race/${race.round}`}>
-      <div className="w-full flex gap-1 items-center p-4 text-[#111827]">
+      <div className="w-full flex gap-1 items-center xxs:p-2 sm:p-4 text-[#111827]">
+
+        {/* date section */}
         <div className="flex flex-col items-center">
           <p className="font-semibold">{moment(race.date).format("DD")}</p>
           <p className="font-font-medium bg-[#EDEDED] rounded-xl px-4">
@@ -52,11 +54,12 @@ const ListView: React.FC<ListViewProps> = ({ race, season }) => {
             {moment(race.date).format("YYYY")}
           </p>
         </div>
-        <div className="border-l-2 border-dotted flex flex-col gap-1 pl-8 ml-8">
-          <p className="font-extrabold">{race.raceName}</p>
+
+        <div className="border-l-2 border-dotted flex flex-col gap-1 xxs:pl-[0.75rem] xxs:ml-[0.75rem] sm:pl-8 sm:ml-8">
+          <p className="xxs:font-bold sm:font-extrabold">{race.raceName}</p>
           <div className="flex items-center gap-2">
             <i
-              className="pi pi-flag-fill"
+              className="pi pi-flag-fill responsive__icon"
               style={{ color: "", fontStyle: "italic" }}
             ></i>
             <p>{race.Circuit.circuitName}</p>

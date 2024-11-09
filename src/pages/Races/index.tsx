@@ -72,33 +72,31 @@ const RaceList: React.FC = () => {
     );
 
   return (
-    <div className="w-[80vw] m-auto py-[5em] flex flex-col gap-16 items-center justify-center">
+    <div className="m-auto flex flex-col items-center justify-center xxs:w-[90vw] xxs:py-[1.25em] xxs:gap-[1.25em] sm:w-[85vw] sm:py-[3.25em] sm:gap-[3.25em] lg:w-[80vw] lg:py-[3.75em] lg:gap-[3.75em] ">
       <div className="w-full flex justify-between">
-        {/* View Toggle */}
+        {/* View Toggle*/}
         <div className="flex gap-2">
           <i
             onClick={() => changeView("list")}
-            className="custom-target-icon pi pi-server"
-            style={{ fontSize: "1.5rem", cursor: "pointer" }}
+            className="custom-target-icon pi pi-server responsive__icon"
+            style={{ cursor: "pointer" }}
           ></i>
+
           <i
             onClick={() => changeView("card")}
-            className="pi pi-th-large"
-            style={{ fontSize: "1.5rem", cursor: "pointer" }}
+            className="pi pi-th-large responsive__icon"
+            style={{ cursor: "pointer" }}
           ></i>
         </div>
 
         {/* Pagination */}
-        <div className="flex gap-8">
+        <div className="flex items-center justify-center xxs:gap-2 sm:gap-4 lg:gap-[1.5rem]">
           <button
             className={`${currentPage !== 1 && "cursor-pointer"}`}
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
           >
-            <i
-              className="pi pi-chevron-circle-left"
-              style={{ fontSize: "1.5rem" }}
-            ></i>
+            <i className="pi pi-chevron-circle-left responsive__icon"></i>
           </button>
           <span>
             Page {currentPage} of {totalPages}
@@ -110,21 +108,20 @@ const RaceList: React.FC = () => {
             }
             disabled={currentPage === totalPages}
           >
-            <i
-              className="pi pi-chevron-circle-right"
-              style={{ fontSize: "1.5rem" }}
-            ></i>
+            <i className="pi pi-chevron-circle-right responsive__icon"></i>
           </button>
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-2 flex-wrap w-full">
+      {/* List of data */}
+
+      <div className="flex items-center justify-center gap-4 flex-wrap w-full">
         {paginatedData.map((race) => (
           <div
             key={race.round}
             className={`border rounded flex flex-col gap-1 ${
               view === "card"
-                ? "flex flex-col gap-1 min-w-[calc(100%_/_3_-_1em)]"
+                ? "flex flex-col gap-1 xxs:w-full  lg:w-[calc(100%_/_3_-_1em)]"
                 : "flex w-full"
             }`}
           >

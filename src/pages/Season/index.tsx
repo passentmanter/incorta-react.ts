@@ -63,7 +63,7 @@ const SeasonList: React.FC = () => {
   return (
     <div className="m-auto flex flex-col items-center justify-center xxs:w-[90vw] xxs:py-[1.25em] xxs:gap-[1.25em] sm:w-[85vw] sm:py-[3.25em] sm:gap-[3.25em] lg:w-[80vw] lg:py-[3.75em] lg:gap-[3.75em] ">
       <div className="w-full flex justify-between">
-        {/* View selection */}
+        {/* View Toggle*/}
         <div className="flex gap-2">
           <i
             onClick={() => changeView("list")}
@@ -120,7 +120,11 @@ const SeasonList: React.FC = () => {
                   : "border flex items-center justify-between w-full xxs:p-1 sm:p-2 lg:p-4 bg-gray-100"
               }`}
           >
-            <img className="xxs:w-[6rem] sm:w-[7rem] lg:w-32 " src={seasonImg} alt="season" />
+            <img
+              className="xxs:w-[6rem] sm:w-[7rem] lg:w-32 "
+              src={seasonImg}
+              alt="season"
+            />
             <p className="m-auto text-5xl font-extrabold italic text-[#FF1E00]">
               {season.season}
             </p>

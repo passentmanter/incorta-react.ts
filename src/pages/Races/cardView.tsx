@@ -42,7 +42,7 @@ const CardView: React.FC<CardViewProps> = ({ race, season }) => {
 
   return (
     <>
-      <div className="flex gap-1 items-center p-4 text-[#111827]">
+      <div className="flex gap-1 items-center text-[#111827] xxs:p-1 sm:p-2 lg:p-4">
         <i
           className="pi pi-flag-fill"
           style={{ color: "", fontStyle: "italic" }}
@@ -59,7 +59,7 @@ const CardView: React.FC<CardViewProps> = ({ race, season }) => {
         ></i>
       </div>
       <hr />
-      <div className="p-4">
+      <div className="xxs:p-2 sm:p-4 lg:p-[1.25rem]">
         <div className="flex gap-2">
           <p className="text-[#FF1E00] font-semibold">Circuit Name:</p>
           {race.Circuit.circuitName}

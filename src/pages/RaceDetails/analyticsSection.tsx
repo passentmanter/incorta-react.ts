@@ -57,7 +57,7 @@ const AnalyticsSection: React.FC<AnalyticsSectionProps> = ({
   const [team, setTeam] = useState<any[]>([]);
   const [selectedTeam, setSelectedTeam] = useState<any[]>([]);
   const [rowClick, setRowClick] = useState<boolean>(true);
-
+  const [error, setError] = useState<boolean>(false);
   const [globalFilter, setGlobalFilter] = useState<string | null>(null);
   const [comparisonField, setComparisonField] = useState<Option | undefined>();
   const [comparison, setComparison] = useState<ComparisonDriver>(
@@ -138,31 +138,39 @@ const AnalyticsSection: React.FC<AnalyticsSectionProps> = ({
 
   return (
     <div className="flex flex-col gap-4 w-full">
-      <div className="bg-[#F9FAFB] p-4 rounded w-full flex sm:flex-col lg:flex-row items-center gap-2 border">
-        <p>Compare Between Drivers in</p>
-        <Dropdown
-          value={comparisonField}
-          onChange={compareBetweenDrivers}
-          options={options}
-          optionLabel="name"
-          placeholder="Select a Comparison"
-          disabled={!selectedTeam || selectedTeam.length < 2}
-        />
-        <Button
-          onClick={handelCompare}
-          className="ml-auto"
-          label="Compare"
-          rounded
-        />
-        <Button
-          onClick={resetComparing}
-          label="Reset"
-          severity="danger"
-          rounded
-        />
+      <div className="bg-[#F9FAFB] xxs:p-2 sm:p-4 rounded w-full flex xxs:flex-col sm:flex-row justify-between items-center gap-8 border">
+        <div className="flex mr-auto gap-1 xxs:flex-col sm:flex-row sm:items-center  ">
+          <p>Compare Between Drivers in</p>
+          <Dropdown
+            value={comparisonField}
+            onChange={compareBetweenDrivers}
+            options={options}
+            optionLabel="name"
+            placeholder="Select a Comparison"
+            disabled={!selectedTeam || selectedTeam.length < 2}
+          />
+          {error && <p>Select at least two competitor</p>}
+        </div>
+        <div className="flex gap-2 ml-auto ">
+          <Button
+            onClick={handelCompare}
+            className=""
+            label="Compare"
+            rounded
+            size="small"
+            disabled={!selectedTeam || selectedTeam.length < 2}
+          />
+          <Button
+            onClick={resetComparing}
+            label="Reset"
+            severity="danger"
+            size="small"
+            rounded
+          />
+        </div>
       </div>
-      <div className="flex sm:flex-col sm:gap-4 lg:flex-row lg:gap-0 justify-between items-center">
-        <div className="sm:w-full lg:w-[48%] border rounded">
+      <div className="flex xxs:flex-col xxs:gap-4 lg:flex-row justify-between items-center">
+        <div className="xxs:w-full lg:w-[48%] border rounded">
           <DataTable
             header={header}
             value={team}
@@ -187,7 +195,7 @@ const AnalyticsSection: React.FC<AnalyticsSectionProps> = ({
             <Column field="nationality" header="Nationality" />
           </DataTable>
         </div>
-        <div className="sm:w-full lg:w-[48%]">
+        <div className="xxs:w-full lg:w-[48%]">
           <ChartSection comparisonDrivers={comparison} />
         </div>
       </div>

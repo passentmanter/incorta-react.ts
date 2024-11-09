@@ -88,7 +88,7 @@ const RaceDetails: React.FC = () => {
   return (
     <div className="bg-[#2B2B2B] pb-8 min-100vh">
       <img src={vrsImg} alt="vrs" />
-      <div className="flex flex-col gap-16 w-[90%] m-auto bg-white p-8 rounded">
+      <div className="flex flex-col gap-16 w-[90%] m-auto bg-white xxs:p-2 sm:p-8 rounded mt-4">
         <AnalyticsSection
           raceDetails={raceDetails}
           defaultComparisonDrivers={defaultComparisonDrivers}
