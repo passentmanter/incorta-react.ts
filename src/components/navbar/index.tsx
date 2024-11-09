@@ -10,12 +10,13 @@ const Navbar: React.FC = () => {
 
   return (
     <div
-      className={`px-16 py-8 ${
-        filteredArray.length <= 1 ? "absolute" : "bg-[#2B2B2B]"
-      } top-0 z-10 w-full flex items-center justify-between`}
+      className={`xxs:p-8 sm:px-16 sm:py-8 
+        ${
+          filteredArray.length <= 1 ? "absolute" : "bg-[#2B2B2B]"
+        } top-0 z-10 w-full`}
     >
       <Link to="incorta-react.ts">
-        <img className="w-[10em]" src={logo} alt="logo" />
+        <img className="xxs:w-[4.5em] sm:w-[10em]" src={logo} alt="logo" />
       </Link>
     </div>
   );

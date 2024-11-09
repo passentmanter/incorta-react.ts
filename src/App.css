@@ -2,3 +2,19 @@
 
 }
 
+
+.responsive__icon {
+    font-size: 1.75rem; /* Default size */
+  }
+  
+  @media (min-width: 360px) {
+      .responsive__icon{
+      font-size: 1.2rem; 
+    }
+  }
+  
+  @media (min-width: 640px) {
+    .responsive__icon{
+      font-size: 1.5rem; 
+    }
+  }

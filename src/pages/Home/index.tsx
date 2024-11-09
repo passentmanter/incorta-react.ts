@@ -9,7 +9,11 @@ import landingImage from "../../assets/landImg.jpeg";
 const Home: React.FC = () => {
   return (
     <div className="relative">
-      <img className="w-full h-screen" src={landingImage} alt="landingImage" />
+      <img
+        className="w-full xxs:h-[50vh] sm:h-[60vh] lg:h-screen"
+        src={landingImage}
+        alt="landingImage"
+      />
       <SeasonList />
     </div>
   );
