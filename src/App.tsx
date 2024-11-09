@@ -6,8 +6,10 @@ import Home from "./pages/Home";
 import RaceList from "./pages/Races";
 import RaceDetails from "./pages/RaceDetails";
 
-import "./App.css";
+// components
 import Navbar from "./components/navbar";
+
+import "./App.css";
 
 const App: React.FC = () => {
   return (

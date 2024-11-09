@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import apiService from "../../api/apiService";
 import { Link } from "react-router-dom";
 
+import Loader from "../../components/loader";
+
 // Assets
 import seasonImg from "../../assets/seasons.png";
-import loadingGif from "../../assets/da832510129901b5af57fce40d583724.gif";
 
 // Define types for the season object and API response
 interface Season {
@@ -53,12 +54,7 @@ const SeasonList: React.FC = () => {
   const changeView = (selectedView: "card" | "list"): void =>
     setView(selectedView);
 
-  if (loading)
-    return (
-      <div className="flex justify-center items-center w-full h-[80vh]">
-        <img className="w-[20vw]" src={loadingGif} alt="loading..." />
-      </div>
-    );
+  if (loading) return <Loader />;
 
   return (
     <div className="m-auto flex flex-col items-center justify-center xxs:w-[90vw] xxs:py-[1.25em] xxs:gap-[1.25em] sm:w-[85vw] sm:py-[3.25em] sm:gap-[3.25em] lg:w-[80vw] lg:py-[3.75em] lg:gap-[3.75em] ">

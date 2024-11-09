@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import apiService from "../../api/apiService";
 import AnalyticsSection from "./analyticsSection";
 
-import vrsImg from "../../assets/Sc2024-11-07 134619.png";
-import loadingGif from "../../assets/da832510129901b5af57fce40d583724.gif";
+import vrsImg from "../../assets/3ea92f9f.jpg";
+import Loader from "../../components/loader";
 
 const titles = {
   default: "An Analysis of Formula 1’s Quickest Race Finishers",
@@ -78,12 +78,7 @@ const RaceDetails: React.FC = () => {
     fetchRaceDetails();
   }, [season, round]);
 
-  if (loading || !defaultComparisonDrivers)
-    return (
-      <div className="flex justify-center items-center w-full h-[80vh] ">
-        <img className="w-[20vw]" src={loadingGif} alt="loading..." />
-      </div>
-    );
+  if (loading || !defaultComparisonDrivers) return <Loader />;
 
   return (
     <div className="bg-[#2B2B2B] pb-8 min-100vh">

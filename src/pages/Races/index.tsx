@@ -5,9 +5,7 @@ import apiService from "../../api/apiService";
 // Component
 import ListView from "./listView";
 import CardView from "./cardView";
-
-// Assets
-import loadingGif from "../../assets/da832510129901b5af57fce40d583724.gif";
+import Loader from "../../components/loader";
 
 interface Race {
   round: string;
@@ -81,12 +79,7 @@ const RaceList: React.FC = () => {
   const changeView = (selectedView: "card" | "list") => setView(selectedView);
 
   // loading view
-  if (loading)
-    return (
-      <div className="flex justify-center items-center w-full h-[80vh] ">
-        <img className="w-[20vw]" src={loadingGif} alt="loading..." />
-      </div>
-    );
+  if (loading) return <Loader />;
 
   return (
     <div className="m-auto flex flex-col items-center justify-center xxs:w-[90vw] xxs:py-[1.25em] xxs:gap-[1.25em] sm:w-[85vw] sm:py-[3.25em] sm:gap-[3.25em] lg:w-[80vw] lg:py-[3.75em] lg:gap-[3.75em] ">
