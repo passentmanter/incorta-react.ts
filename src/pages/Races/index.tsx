@@ -35,18 +35,35 @@ const RaceList: React.FC = () => {
 
   const [view, setView] = useState<"card" | "list">("card");
 
+  const fetchRaces = async () => {
+    if (!season) return;
+    try {
+      const data: Race[] = await apiService.getRacesForSeason(season);
+
+      // Retrieve the pinned drivers' IDs from local storage
+      const pinnedDrivers: string[] = JSON.parse(
+        localStorage.getItem("pinnedRaces") || "[]"
+      );
+
+      // Sort drivers with pinned ones at the top
+      const sortedDrivers = data.sort((a, b) => {
+        const isAPinned = pinnedDrivers.includes(a.raceName);
+        const isBPinned = pinnedDrivers.includes(b.raceName);
+
+        if (isAPinned && !isBPinned) return -1;
+        if (!isAPinned && isBPinned) return 1;
+        return 0;
+      });
+
+      setRaces(sortedDrivers);
+    } catch (error) {
+      console.error(`Failed to fetch races for season ${season}:`, error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const fetchRaces = async () => {
-      if (!season) return;
-      try {
-        const data: Race[] = await apiService.getRacesForSeason(season);
-        setRaces(data);
-      } catch (error) {
-        console.error(`Failed to fetch races for season ${season}:`, error);
-      } finally {
-        setLoading(false);
-      }
-    };
     fetchRaces();
   }, [season]);
 
@@ -126,9 +143,9 @@ const RaceList: React.FC = () => {
             }`}
           >
             {view === "card" ? (
-              <CardView race={race} season={season!} />
+              <CardView race={race} season={season!} fetchRaces={fetchRaces} />
             ) : (
-              <ListView race={race} season={season!} />
+              <ListView race={race} season={season!} fetchRaces={fetchRaces} />
             )}
           </div>
         ))}

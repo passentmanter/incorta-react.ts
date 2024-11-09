@@ -3,9 +3,7 @@
 }
 
 
-.responsive__icon {
-    font-size: 1.75rem; /* Default size */
-  }
+
   
   @media (min-width: 360px) {
       .responsive__icon{
@@ -17,4 +15,9 @@
     .responsive__icon{
       font-size: 1.5rem; 
     }
+
+
+  }
+.responsive__icon {
+    font-size: 1.35rem; /* Default size */
   }

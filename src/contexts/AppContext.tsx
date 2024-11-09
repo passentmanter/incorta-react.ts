@@ -1,4 +1,10 @@
-import React, { createContext, useReducer, useContext, ReactNode, Dispatch } from "react";
+import React, {
+  createContext,
+  useReducer,
+  useContext,
+  ReactNode,
+  Dispatch,
+} from "react";
 
 export interface Race {
   raceName: string;
@@ -9,7 +15,7 @@ export interface Race {
 interface AppState {
   selectedSeason: string | null;
   races: Race[];
-  pinnedRaces: Race[];
+  pinnedRaces: string[];
   viewMode: "list" | "card";
   currentRoute: string;
   raceDetails: Record<string, any>;
@@ -18,7 +24,7 @@ interface AppState {
 type Action =
   | { type: "SET_SELECTED_SEASON"; payload: string }
   | { type: "SET_RACES"; payload: Race[] }
-  | { type: "PIN_RACE"; payload: Race }
+  | { type: "PIN_RACE"; payload: string }
   | { type: "UNPIN_RACE"; payload: string }
   | { type: "SET_VIEW_MODE"; payload: "list" | "card" }
   | { type: "SET_CURRENT_ROUTE"; payload: string }
@@ -40,7 +46,7 @@ function appReducer(state: AppState, action: Action): AppState {
     case "SET_RACES":
       return { ...state, races: action.payload };
     case "PIN_RACE":
-      if (!state.pinnedRaces.find((race) => race.raceName === action.payload.raceName)) {
+      if (!state.pinnedRaces.find((race) => race === action.payload)) {
         const updatedPinned = [...state.pinnedRaces, action.payload];
         localStorage.setItem("pinnedRaces", JSON.stringify(updatedPinned));
         return { ...state, pinnedRaces: updatedPinned };
@@ -48,7 +54,7 @@ function appReducer(state: AppState, action: Action): AppState {
       return state;
     case "UNPIN_RACE":
       const filteredPinned = state.pinnedRaces.filter(
-        (race) => race.raceName !== action.payload
+        (race) => race !== action.payload
       );
       localStorage.setItem("pinnedRaces", JSON.stringify(filteredPinned));
       return { ...state, pinnedRaces: filteredPinned };

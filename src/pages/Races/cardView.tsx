@@ -21,14 +21,15 @@ interface Race {
 interface CardViewProps {
   race: Race;
   season: string;
+  fetchRaces: () => Promise<void>;
 }
 
-const CardView: React.FC<CardViewProps> = ({ race, season }) => {
+const CardView: React.FC<CardViewProps> = ({ race, season, fetchRaces }) => {
   const { state, dispatch } = useAppContext();
 
   // Check if a race is pinned based on its name
   const isRacePinned = (name: string): boolean => {
-    return state.pinnedRaces.some((r) => r.raceName === name);
+    return state.pinnedRaces.some((r) => r === name);
   };
 
   // Handle pinning/unpinning a race
@@ -36,8 +37,9 @@ const CardView: React.FC<CardViewProps> = ({ race, season }) => {
     if (isRacePinned(race.raceName)) {
       dispatch({ type: "UNPIN_RACE", payload: race.raceName });
     } else {
-      dispatch({ type: "PIN_RACE", payload: race });
+      dispatch({ type: "PIN_RACE", payload: race.raceName });
     }
+    fetchRaces();
   };
 
   return (
@@ -50,7 +52,7 @@ const CardView: React.FC<CardViewProps> = ({ race, season }) => {
         <h2 className="text-xl font-bold">{race.raceName}</h2>
         <i
           onClick={() => handlePinRace(race)}
-          className="pi pi-heart-fill"
+          className="pi pi-thumbtack responsive__icon "
           style={{
             color: isRacePinned(race.raceName) ? "red" : "gray",
             marginLeft: "auto",

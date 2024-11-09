@@ -21,14 +21,15 @@ interface Race {
 interface ListViewProps {
   race: Race;
   season: string;
+  fetchRaces: () => Promise<void>;
 }
 
-const ListView: React.FC<ListViewProps> = ({ race, season }) => {
+const ListView: React.FC<ListViewProps> = ({ race, season, fetchRaces }) => {
   const { state, dispatch } = useAppContext();
 
   // Check if a race is pinned based on its name
   const isRacePinned = (name: string): boolean => {
-    return state.pinnedRaces.some((r) => r.raceName === name);
+    return state.pinnedRaces.some((r) => r === name);
   };
 
   // Handle pinning/unpinning a race
@@ -36,14 +37,14 @@ const ListView: React.FC<ListViewProps> = ({ race, season }) => {
     if (isRacePinned(race.raceName)) {
       dispatch({ type: "UNPIN_RACE", payload: race.raceName });
     } else {
-      dispatch({ type: "PIN_RACE", payload: race });
+      dispatch({ type: "PIN_RACE", payload: race.raceName });
     }
+    fetchRaces();
   };
 
   return (
     <Link to={`/season/${season}/race/${race.round}`}>
       <div className="w-full flex gap-1 items-center xxs:p-2 sm:p-4 text-[#111827]">
-
         {/* date section */}
         <div className="flex flex-col items-center">
           <p className="font-semibold">{moment(race.date).format("DD")}</p>
@@ -68,12 +69,11 @@ const ListView: React.FC<ListViewProps> = ({ race, season }) => {
         <div className="flex items-center gap-4 ml-auto">
           <i
             onClick={() => handlePinRace(race)}
-            className="pi pi-heart-fill"
+            className="pi pi-thumbtack responsive__icon"
             style={{
               color: isRacePinned(race.raceName) ? "red" : "gray",
               marginLeft: "auto",
               cursor: "pointer",
-              fontSize: "1.5rem",
             }}
           ></i>
         </div>
