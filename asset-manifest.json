@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/incorta-react.ts/static/css/main.61f7fda6.css",
-    "main.js": "/incorta-react.ts/static/js/main.3bc087a8.js",
+    "main.css": "/incorta-react.ts/static/css/main.5ea4dc9b.css",
+    "main.js": "/incorta-react.ts/static/js/main.6edce0c1.js",
     "static/js/453.a4bb1f77.chunk.js": "/incorta-react.ts/static/js/453.a4bb1f77.chunk.js",
     "static/media/Sc2024-11-07 134619.png": "/incorta-react.ts/static/media/Sc2024-11-07 134619.c06195424bb4d5334c1d.png",
     "static/media/InterVariable-Italic.woff2": "/incorta-react.ts/static/media/InterVariable-Italic.e295f70fe3e2df296c7b.woff2",
@@ -16,12 +16,12 @@
     "static/media/pngegg.png": "/incorta-react.ts/static/media/pngegg.254eaffa3f4703fbf29a.png",
     "static/media/seasons.png": "/incorta-react.ts/static/media/seasons.f08e96d2487acb82aa15.png",
     "index.html": "/incorta-react.ts/index.html",
-    "main.61f7fda6.css.map": "/incorta-react.ts/static/css/main.61f7fda6.css.map",
-    "main.3bc087a8.js.map": "/incorta-react.ts/static/js/main.3bc087a8.js.map",
+    "main.5ea4dc9b.css.map": "/incorta-react.ts/static/css/main.5ea4dc9b.css.map",
+    "main.6edce0c1.js.map": "/incorta-react.ts/static/js/main.6edce0c1.js.map",
     "453.a4bb1f77.chunk.js.map": "/incorta-react.ts/static/js/453.a4bb1f77.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61f7fda6.css",
-    "static/js/main.3bc087a8.js"
+    "static/css/main.5ea4dc9b.css",
+    "static/js/main.6edce0c1.js"
   ]
 }
