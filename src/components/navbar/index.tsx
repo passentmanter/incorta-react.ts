@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import logo from "../../assets/pngegg.png";
+import logo from "../../assets/pngeg.png";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
