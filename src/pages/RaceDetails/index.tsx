@@ -10,11 +10,13 @@ import {
   Constructor,
   RaceDetail,
   ComparisonData,
-} from "../../types/types"; 
+  multipleComparisonData,
+} from "../../types/types";
 
 // Assets
 import vrsImg from "../../assets/3ea92f9f.jpg";
 import Loader from "../../components/loader";
+import MultipleBarChart from "./multipleBarChart";
 
 const titles = {
   default: "An Analysis of Formula 1’s Quickest Race Finishers",
@@ -30,12 +32,16 @@ const RaceDetails: React.FC = () => {
   const [defaultComparisonDrivers, setDefaultComparisonDrivers] =
     useState<ComparisonData | null>(null);
 
+  const [multipleBarChart, setMultipleBarChart] =
+    useState<multipleComparisonData | null>(null);
+
   useEffect(() => {
     const fetchRaceDetails = async () => {
       if (!season || !round) return;
 
       try {
         const data: any = await apiService.getRaceDetails(season, round);
+
         setRaceDetails(data);
 
         const finishedDriverList = data.filter(
@@ -44,13 +50,32 @@ const RaceDetails: React.FC = () => {
 
         const xAxis: string[] = [];
         const yAxis: number[] = [];
+
+        const points: number[] = [];
+        const laps: number[] = [];
+        const grid: number[] = [];
+
         for (let index = 0; index < finishedDriverList.length; index++) {
           const element = data[index];
           xAxis.push(element.Driver.givenName);
           yAxis.push(Number(element.Time.millis));
+
+          points.push(Number(element.points));
+          laps.push(Number(element.laps));
+          grid.push(Number(element.grid));
+        }
+
+        for (let index = 0; index < data.length; index++) {
+          const element = data[index];
+          xAxis.push(element.Driver.givenName);
+
+          points.push(Number(element.points));
+          laps.push(Number(element.laps));
+          grid.push(Number(element.grid));
         }
 
         setDefaultComparisonDrivers({ xAxis, yAxis, title: titles.default });
+        setMultipleBarChart({ xAxis, points, laps, grid });
       } catch (error) {
         console.error(`Failed to fetch races for season ${season}:`, error);
       } finally {
@@ -61,7 +86,8 @@ const RaceDetails: React.FC = () => {
     fetchRaceDetails();
   }, [season, round]);
 
-  if (loading || !defaultComparisonDrivers) return <Loader />;
+  if (loading || !defaultComparisonDrivers || !multipleBarChart)
+    return <Loader />;
 
   return (
     <div className="bg-[#2B2B2B] pb-8 min-100vh">
@@ -71,6 +97,7 @@ const RaceDetails: React.FC = () => {
           raceDetails={raceDetails}
           defaultComparisonDrivers={defaultComparisonDrivers}
         />
+        <MultipleBarChart multipleBarChart={multipleBarChart} />
       </div>
     </div>
   );

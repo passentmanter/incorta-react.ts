@@ -25,23 +25,29 @@ export interface ComparisonData {
   title: string;
 }
 
+export interface multipleComparisonData {
+  xAxis: string[];
+  points: number[];
+  laps: number[];
+  grid: number[];
+}
+
 export interface Season {
   season: string;
   url: string;
 }
 
-
 export interface Race {
-    round: string;
-    raceName: string;
-    circuit: string;
-    date: string;
-    season: string;
+  round: string;
+  raceName: string;
+  circuit: string;
+  date: string;
+  season: string;
+  url: string;
+  Circuit: {
+    Location: { country: string; lat: string; locality: string; long: string };
+    circuitId: string;
+    circuitName: string;
     url: string;
-    Circuit: {
-      Location: { country: string; lat: string; locality: string; long: string };
-      circuitId: string;
-      circuitName: string;
-      url: string;
-    };
-  }
+  };
+}
