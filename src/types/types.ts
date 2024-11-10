@@ -1,4 +1,3 @@
-// types.ts
 export interface Driver {
   givenName: string;
   familyName: string;

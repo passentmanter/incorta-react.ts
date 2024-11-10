@@ -10,7 +10,7 @@ import {
   Constructor,
   RaceDetail,
   ComparisonData,
-} from "../../types/types"; // Import interfaces
+} from "../../types/types"; 
 
 // Assets
 import vrsImg from "../../assets/3ea92f9f.jpg";

@@ -10,7 +10,6 @@ import ViewChanger from "../../components/viewChanger";
 // Assets
 import seasonImg from "../../assets/seasons.png";
 
-// Define types for the season object and API response
 interface Season {
   season: string;
 }

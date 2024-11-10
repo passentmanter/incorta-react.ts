@@ -27,7 +27,7 @@ const RaceList: React.FC = () => {
     try {
       const data: Race[] = await apiService.getRacesForSeason(season);
 
-      // Retrieve the pinned drivers' IDs from local storage
+      // Retrieve the pinned drivers from local storage
       const pinnedDrivers: string[] = JSON.parse(
         localStorage.getItem("pinnedRaces") || "[]"
       );
@@ -85,7 +85,6 @@ const RaceList: React.FC = () => {
       </div>
 
       {/* List of data */}
-
       <div className="flex items-center justify-center gap-4 flex-wrap w-full">
         {paginatedData.map((race) => (
           <div

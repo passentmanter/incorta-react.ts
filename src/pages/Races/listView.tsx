@@ -33,6 +33,7 @@ const ListView: React.FC<ListViewProps> = ({ race, season, fetchRaces }) => {
   return (
     <Link to={`/season/${season}/race/${race.round}`}>
       <div className="w-full flex gap-1 items-center xxs:p-2 sm:p-4 text-[#111827]">
+        
         {/* date section */}
         <div className="flex flex-col items-center">
           <p className="font-semibold">{moment(race.date).format("DD")}</p>
