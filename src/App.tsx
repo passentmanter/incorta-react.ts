@@ -15,7 +15,7 @@ const App: React.FC = () => {
   return (
     <AppProvider>
       <div className="App">
-        <Router>
+        <Router basename="incorta-react.ts" >
           <Navbar />
           <Routes>
             <Route path="incorta-react.ts/" element={<Home />} />
