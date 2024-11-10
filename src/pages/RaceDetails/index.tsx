@@ -1,41 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 import apiService from "../../api/apiService";
 import AnalyticsSection from "./analyticsSection";
 
+// Types
+import {
+  Driver,
+  Constructor,
+  RaceDetail,
+  ComparisonData,
+} from "../../types/types"; // Import interfaces
+
+// Assets
 import vrsImg from "../../assets/3ea92f9f.jpg";
 import Loader from "../../components/loader";
 
 const titles = {
   default: "An Analysis of Formula 1’s Quickest Race Finishers",
 };
-
-interface Driver {
-  givenName: string;
-  familyName: string;
-  nationality: string;
-  driverId: string;
-}
-
-interface Constructor {
-  nationality: string;
-}
-
-interface RaceDetail {
-  Driver: Driver;
-  Constructor: Constructor;
-  position: number;
-  Time?: { millis: string };
-  points: number;
-  laps: number;
-  status: string;
-}
-
-interface ComparisonData {
-  xAxis: string[];
-  yAxis: number[];
-  title: string;
-}
 
 const RaceDetails: React.FC = () => {
   const { season, round } = useParams<{

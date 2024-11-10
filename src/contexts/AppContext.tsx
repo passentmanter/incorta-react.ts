@@ -8,7 +8,6 @@ import React, {
 
 export interface Race {
   raceName: string;
-  // Add any other race properties as needed
   id?: string;
 }
 

@@ -9,20 +9,7 @@ import Loader from "../../components/loader";
 import PaginationComponent from "../../components/pagination";
 import ViewChanger from "../../components/viewChanger";
 
-interface Race {
-  round: string;
-  raceName: string;
-  circuit: string;
-  date: string;
-  season: string;
-  url: string;
-  Circuit: {
-    Location: { country: string; lat: string; locality: string; long: string };
-    circuitId: string;
-    circuitName: string;
-    url: string;
-  };
-}
+import { Race } from "../../types/types";
 
 const RaceList: React.FC = () => {
   const [races, setRaces] = useState<Race[]>([]);

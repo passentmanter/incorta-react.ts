@@ -8,32 +8,7 @@ import { InputText } from "primereact/inputtext";
 import { InputIcon } from "primereact/inputicon";
 import ChartSection from "./chartSection";
 
-interface Driver {
-  givenName: string;
-  familyName: string;
-  nationality: string;
-  driverId: string;
-}
-
-interface Constructor {
-  nationality: string;
-}
-
-interface RaceDetail {
-  Driver: Driver;
-  Constructor: Constructor;
-  position: number;
-  Time?: { millis: string };
-  points: number;
-  laps: number;
-  status: string;
-}
-
-interface ComparisonDriver {
-  xAxis: string[];
-  yAxis: number[];
-  title: string;
-}
+import { RaceDetail, ComparisonData } from "../../types/types";
 
 interface Option {
   name: string;
@@ -42,7 +17,7 @@ interface Option {
 
 interface AnalyticsSectionProps {
   raceDetails: RaceDetail[];
-  defaultComparisonDrivers: ComparisonDriver;
+  defaultComparisonDrivers: ComparisonData;
 }
 
 const options: Option[] = [
@@ -60,7 +35,7 @@ const AnalyticsSection: React.FC<AnalyticsSectionProps> = ({
   const [error, setError] = useState<boolean>(false);
   const [globalFilter, setGlobalFilter] = useState<string | null>(null);
   const [comparisonField, setComparisonField] = useState<Option | undefined>();
-  const [comparison, setComparison] = useState<ComparisonDriver>(
+  const [comparison, setComparison] = useState<ComparisonData>(
     defaultComparisonDrivers
   );
 

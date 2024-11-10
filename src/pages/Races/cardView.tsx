@@ -2,21 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
 import { useAppContext } from "../../contexts/AppContext";
-
-interface Race {
-  round: string;
-  raceName: string;
-  circuit: string;
-  date: string;
-  season: string;
-  url: string;
-  Circuit: {
-    Location: { country: string; lat: string; locality: string; long: string };
-    circuitId: string;
-    circuitName: string;
-    url: string;
-  };
-}
+import { Race } from "../../types/types";
 
 interface CardViewProps {
   race: Race;

@@ -1,39 +1,6 @@
+import { Season, Race, RaceDetail } from "../types/types";
+
 const BASE_URL = "https://ergast.com/api/f1";
-
-interface Season {
-  season: string;
-  url: string;
-}
-
-interface Race {
-  round: string;
-  raceName: string;
-  circuit: string;
-  date: string;
-  season: string;
-  url: string;
-  Circuit: {
-    Location: { country: string; lat: string; locality: string; long: string };
-    circuitId: string;
-    circuitName: string;
-    url: string;
-  };
-}
-
-interface Driver {
-  givenName: string;
-  familyName: string;
-  nationality: string;
-  driverId: string;
-}
-
-interface DriverResult {
-  Driver: Driver;
-  Time?: { millis: string; time: string };
-  laps: string;
-  number: string;
-  points: string;
-}
 
 const apiService = {
   // Fetch all available seasons
@@ -64,13 +31,13 @@ const apiService = {
   getRaceDetails: async (
     season: string,
     round: string | undefined
-  ): Promise<DriverResult[]> => {
+  ): Promise<RaceDetail[]> => {
     try {
       const response = await fetch(
         `${BASE_URL}/${season}/${round}/results.json`
       );
       const data = await response.json();
-      return data.MRData.RaceTable.Races[0].Results as DriverResult[]; // Cast to DriverResult[]
+      return data.MRData.RaceTable.Races[0].Results as RaceDetail[]; // Cast to DriverResult[]
     } catch (error) {
       console.error(
         `Error fetching race details for season ${season}, round ${round}:`,

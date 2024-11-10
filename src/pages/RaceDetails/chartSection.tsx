@@ -1,15 +1,10 @@
 import React from "react";
 import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
-
-interface ComparisonDrivers {
-  title: string;
-  xAxis: string[];
-  yAxis: number[];
-}
+import { ComparisonData } from "../../types/types";
 
 interface ChartSectionProps {
-  comparisonDrivers: ComparisonDrivers;
+  comparisonDrivers: ComparisonData;
 }
 
 const ChartSection: React.FC<ChartSectionProps> = ({ comparisonDrivers }) => {
