@@ -1,8 +1,13 @@
 {
   "files": {
     "main.css": "/incorta-react.ts/static/css/main.984b562d.css",
-    "main.js": "/incorta-react.ts/static/js/main.87037fac.js",
-    "static/js/453.a4bb1f77.chunk.js": "/incorta-react.ts/static/js/453.a4bb1f77.chunk.js",
+    "main.js": "/incorta-react.ts/static/js/main.a3b88517.js",
+    "static/js/210.503a4e89.chunk.js": "/incorta-react.ts/static/js/210.503a4e89.chunk.js",
+    "static/js/266.6fabf872.chunk.js": "/incorta-react.ts/static/js/266.6fabf872.chunk.js",
+    "static/js/633.238e2a97.chunk.js": "/incorta-react.ts/static/js/633.238e2a97.chunk.js",
+    "static/js/453.e042b882.chunk.js": "/incorta-react.ts/static/js/453.e042b882.chunk.js",
+    "static/js/73.0886cc04.chunk.js": "/incorta-react.ts/static/js/73.0886cc04.chunk.js",
+    "static/js/178.b163a06b.chunk.js": "/incorta-react.ts/static/js/178.b163a06b.chunk.js",
     "static/media/InterVariable-Italic.woff2": "/incorta-react.ts/static/media/InterVariable-Italic.e295f70fe3e2df296c7b.woff2",
     "static/media/InterVariable.woff2": "/incorta-react.ts/static/media/InterVariable.a0e477f2f1f9d2376fde.woff2",
     "static/media/primeicons.svg": "/incorta-react.ts/static/media/primeicons.6ed59f962963a4a73af2.svg",
@@ -13,15 +18,19 @@
     "static/media/3ea92f9f.jpg": "/incorta-react.ts/static/media/3ea92f9f.595c8c1a30a0c649a9bc.jpg",
     "static/media/landImg.jpeg": "/incorta-react.ts/static/media/landImg.221e1cc6c61aa9e38a67.jpeg",
     "static/media/primeicons.woff2": "/incorta-react.ts/static/media/primeicons.024b32cc7bf399b1a847.woff2",
-    "static/media/pngegg.png": "/incorta-react.ts/static/media/pngegg.254eaffa3f4703fbf29a.png",
     "static/media/seasons.png": "/incorta-react.ts/static/media/seasons.f08e96d2487acb82aa15.png",
     "index.html": "/incorta-react.ts/index.html",
     "main.984b562d.css.map": "/incorta-react.ts/static/css/main.984b562d.css.map",
-    "main.87037fac.js.map": "/incorta-react.ts/static/js/main.87037fac.js.map",
-    "453.a4bb1f77.chunk.js.map": "/incorta-react.ts/static/js/453.a4bb1f77.chunk.js.map"
+    "main.a3b88517.js.map": "/incorta-react.ts/static/js/main.a3b88517.js.map",
+    "210.503a4e89.chunk.js.map": "/incorta-react.ts/static/js/210.503a4e89.chunk.js.map",
+    "266.6fabf872.chunk.js.map": "/incorta-react.ts/static/js/266.6fabf872.chunk.js.map",
+    "633.238e2a97.chunk.js.map": "/incorta-react.ts/static/js/633.238e2a97.chunk.js.map",
+    "453.e042b882.chunk.js.map": "/incorta-react.ts/static/js/453.e042b882.chunk.js.map",
+    "73.0886cc04.chunk.js.map": "/incorta-react.ts/static/js/73.0886cc04.chunk.js.map",
+    "178.b163a06b.chunk.js.map": "/incorta-react.ts/static/js/178.b163a06b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.984b562d.css",
-    "static/js/main.87037fac.js"
+    "static/js/main.a3b88517.js"
   ]
 }
