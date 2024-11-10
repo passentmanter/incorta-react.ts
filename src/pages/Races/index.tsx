@@ -6,6 +6,7 @@ import apiService from "../../api/apiService";
 import ListView from "./listView";
 import CardView from "./cardView";
 import Loader from "../../components/loader";
+import PaginationComponent from "../../components/pagination";
 
 interface Race {
   round: string;
@@ -100,27 +101,12 @@ const RaceList: React.FC = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex items-center justify-center xxs:gap-2 sm:gap-4 lg:gap-[1.5rem]">
-          <button
-            className={`${currentPage !== 1 && "cursor-pointer"}`}
-            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-            disabled={currentPage === 1}
-          >
-            <i className="pi pi-chevron-circle-left responsive__icon"></i>
-          </button>
-          <span>
-            Page {currentPage} of {totalPages}
-          </span>
-          <button
-            className={`${currentPage !== totalPages && "cursor-pointer"}`}
-            onClick={() =>
-              setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-            }
-            disabled={currentPage === totalPages}
-          >
-            <i className="pi pi-chevron-circle-right responsive__icon"></i>
-          </button>
-        </div>
+        {/* Pagination */}
+        <PaginationComponent
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          totalPages={totalPages}
+        />
       </div>
 
       {/* List of data */}
