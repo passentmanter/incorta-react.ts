@@ -99,6 +99,16 @@ This project leverages **React** with **TypeScript** to ensure type safety and m
 - **compare between derivers**: Ability for comparing between any two competitors with selection of Comparison points.
 - **Multiple bar chart**: Displays a comparison between all drivers in main three criteria (points, laps and grid).
 
+## Web Performance Analysis
+
+| Metric | Score |
+| - | - |
+| `Performance` | 100% |
+| `Accessibility` | 80% |
+| `Best Practices	` | 93% |
+| `SEO` | 100% |
+
+![Screenshot 2024-11-10 191129](https://github.com/user-attachments/assets/befeb6ad-53d4-4ccc-af1b-b710a09110d5)
 
 
 ## License
