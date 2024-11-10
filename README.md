@@ -14,24 +14,24 @@ Ensure you have the following installed:
 ## Setup and Installation
 
 1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/passentmanter/incorta-react.ts.git
-
+```bash
+ git clone https://github.com/yourusername/yourproject.git
+```
 2. Navigate to the project folder:
-
-  ```bash
-  cd incorta-react.ts
+```bash
+cd incorta-react.ts
+```
 
 3. Install the dependencies:
 
-  ```bash
-  npm install
+```bash
+npm install
+```
 
 4. Start the development server:
-
-    ```bash
-    npm start
+```bash
+npm start
+```
 
 The app will run on http://localhost:3000.
 
