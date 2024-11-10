@@ -15,16 +15,13 @@ const App: React.FC = () => {
   return (
     <AppProvider>
       <div className="App">
-        <Router basename="incorta-react.ts" >
+        <Router basename="incorta-react.ts">
           <Navbar />
           <Routes>
-            <Route path="incorta-react.ts/" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/season/:season" element={<RaceList />} />
             <Route
-              path="incorta-react.ts/season/:season"
-              element={<RaceList />}
-            />
-            <Route
-              path="incorta-react.ts/season/:season/race/:round"
+              path="/season/:season/race/:round"
               element={<RaceDetails />}
             />
           </Routes>
