@@ -45,6 +45,7 @@ The app will run on http://localhost:3000.
 - **src/pages**: Organizes page-level components for main sections such as Seasons, Races, and Race Details.
 - **src/services**: Manages API calls to the Ergast API.
 - **src/context**: Implements global state management for features like pinning races.
+- **src/types**: Contains all types declaration (interfaces) of the project.
 - **public**: Contains static files.
 
 ## Technical Approach and Architectural Decisions
@@ -56,6 +57,8 @@ This project leverages **React** with **TypeScript** to ensure type safety and m
 - **React**: For building the UI components.
 - **TypeScript**: Adds type safety to JavaScript, preventing potential errors and improving code quality.
 - **Tailwind CSS**: A utility-first CSS framework is used to speed up development and reduce custom CSS, focusing on consistency and maintainability across the application.
+- **PrimeReact**: A UI component library providing a wide range of customizable and accessible components, improving user experience with advanced features.
+
 
 2. ### Data Fetching and API Handling
 
@@ -79,7 +82,7 @@ This project leverages **React** with **TypeScript** to ensure type safety and m
 6. ### Testing
 
 - **Unit Tests**: Jest and React Testing Library were used for unit testing of critical components and business logic.
-- **E2E Tests (Bonus)**: End-to-end tests can be added using Cypress for additional test coverage.
+- **E2E Tests**: End-to-end tests can be added using Cypress for additional test coverage.
 
 ## API Endpoints
 
