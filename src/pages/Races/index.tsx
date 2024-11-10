@@ -7,6 +7,7 @@ import ListView from "./listView";
 import CardView from "./cardView";
 import Loader from "../../components/loader";
 import PaginationComponent from "../../components/pagination";
+import ViewChanger from "../../components/viewChanger";
 
 interface Race {
   round: string;
@@ -86,21 +87,8 @@ const RaceList: React.FC = () => {
     <div className="m-auto flex flex-col items-center justify-center xxs:w-[90vw] xxs:py-[1.25em] xxs:gap-[1.25em] sm:w-[85vw] sm:py-[3.25em] sm:gap-[3.25em] lg:w-[80vw] lg:py-[3.75em] lg:gap-[3.75em] ">
       <div className="w-full flex justify-between">
         {/* View Toggle*/}
-        <div className="flex gap-2">
-          <i
-            onClick={() => changeView("list")}
-            className="custom-target-icon pi pi-server responsive__icon"
-            style={{ cursor: "pointer" }}
-          ></i>
+        <ViewChanger changeView={changeView} />
 
-          <i
-            onClick={() => changeView("card")}
-            className="pi pi-th-large responsive__icon"
-            style={{ cursor: "pointer" }}
-          ></i>
-        </div>
-
-        {/* Pagination */}
         {/* Pagination */}
         <PaginationComponent
           currentPage={currentPage}
