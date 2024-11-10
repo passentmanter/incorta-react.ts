@@ -17,3 +17,26 @@ Ensure you have the following installed:
 
    ```bash
    git clone https://github.com/passentmanter/incorta-react.ts.git
+
+2. Navigate to the project folder:
+
+  ```bash
+  cd incorta-react.ts
+
+3. Install the dependencies:
+
+  ```bash
+  npm install
+
+4. Start the development server:
+
+    ```bash
+    npm start
+
+The app will run on http://localhost:3000.
+
+## Technical Approach
+
+React: Functional components with hooks for state and lifecycle management.
+TypeScript: Type safety to enhance development experience and reduce runtime errors.
+Tailwind CSS: Utility-first CSS framework for styling, providing responsiveness and modularity.
