@@ -75,7 +75,7 @@ const CardView: React.FC<CardViewProps> = ({ race, season, fetchRaces }) => {
       </div>
       <Link
         className="m-auto mb-4 text-[#0284c7] underline-offset-1"
-        to={`/incorta-react.ts/season/${season}/race/${race.round}`}
+        to={`/season/${season}/race/${race.round}`}
       >
         Show details
       </Link>

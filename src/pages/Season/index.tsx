@@ -129,7 +129,7 @@ const SeasonList: React.FC = () => {
               className={`text-[#0284c7] xxs:text-[0.75rem] sm:text-[1rem] sm:ml-auto ${
                 view === "card" && "ml-auto"
               } `}
-              to={`/incorta-react.ts/season/${season.season}`}
+              to={`/season/${season.season}`}
             >
               Show races
             </Link>

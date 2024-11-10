@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
           filteredArray.length <= 1 ? "absolute" : "bg-[#2B2B2B]"
         } top-0 z-10 w-full`}
     >
-      <Link to="incorta-react.ts">
+      <Link to="/">
         <img className="xxs:w-[4.5em] sm:w-[10em]" src={logo} alt="logo" />
       </Link>
     </div>
